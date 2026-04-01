@@ -1,5 +1,5 @@
 {
-  "name": "Test Set Node Workflow",
+  "name": "Test Node Workflow",
   "nodes": [
     {
       "parameters": {
