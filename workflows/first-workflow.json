@@ -1,0 +1,88 @@
+{
+  "name": "Test Set Node Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "Alice"
+            },
+            {
+              "name": "email",
+              "value": "alice@example.com"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set Node",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        528,
+        80
+      ],
+      "id": "5d68de0c-037c-4ad1-8013-0c4537d05c2a"
+    },
+    {
+      "parameters": {},
+      "name": "Debug Node",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        720,
+        80
+      ],
+      "id": "642ef5fa-0346-454d-a862-11de1ce27854"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        304,
+        80
+      ],
+      "id": "ef5e47d5-f716-4848-8b84-7d622267fa87",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Set Node": {
+      "main": [
+        [
+          {
+            "node": "Debug Node",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Set Node",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "f5d138db-c747-4422-bf18-337a957701c1",
+  "meta": {
+    "instanceId": "fe9917ed37bff16ff9d8cd1d0c410ab28e79b0a22ee12d6473629fb2c9c21c23"
+  },
+  "id": "LdHeJoGJFufEegTD",
+  "tags": []
+}
